@@ -38,13 +38,13 @@ public void pesquisa(){
         rs = pst.executeQuery();
         
         if(rs.next()){
-            txtNomeUsuario.setText(rs.getString(2));
+            txtNomeUsu.setText(rs.getString(2));
             txtLoginUsuario.setText(rs.getString(3));
            txtSenhaUsuario.setText(rs.getString(4));
             
         }else{
             JOptionPane.showMessageDialog(null, "Usuario não cadastrado!");
-            txtNomeUsuario.setText(null);
+            txtNomeUsu.setText(null);
             txtLoginUsuario.setText(null);
             
             dispose();
@@ -68,7 +68,7 @@ public void pesquisa(){
         jLabel1 = new javax.swing.JLabel();
         txtIDUsuario = new javax.swing.JTextField();
         btnPesquisar = new javax.swing.JButton();
-        txtNomeUsuario = new javax.swing.JTextField();
+        txtNomeUsu = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         txtLoginUsuario = new javax.swing.JTextField();
@@ -100,9 +100,9 @@ public void pesquisa(){
             }
         });
 
-        txtNomeUsuario.addActionListener(new java.awt.event.ActionListener() {
+        txtNomeUsu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtNomeUsuarioActionPerformed(evt);
+                txtNomeUsuActionPerformed(evt);
             }
         });
 
@@ -191,7 +191,7 @@ public void pesquisa(){
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addComponent(txtLoginUsuario, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 463, Short.MAX_VALUE)
                             .addComponent(txtIDUsuario, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtNomeUsuario, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtNomeUsu, javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(txtSenhaUsuario))))
                 .addGap(0, 0, Short.MAX_VALUE))
         );
@@ -204,7 +204,7 @@ public void pesquisa(){
                     .addComponent(txtIDUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtNomeUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtNomeUsu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -241,9 +241,9 @@ public void pesquisa(){
        
     }//GEN-LAST:event_btnPesquisarActionPerformed
 
-    private void txtNomeUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNomeUsuarioActionPerformed
+    private void txtNomeUsuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNomeUsuActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtNomeUsuarioActionPerformed
+    }//GEN-LAST:event_txtNomeUsuActionPerformed
 
     private void txtLoginUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtLoginUsuarioActionPerformed
         // TODO add your handling code here:
@@ -258,7 +258,7 @@ public void pesquisa(){
     private void btnInserirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInserirActionPerformed
         //Captura de dados na tela Usuario
         int id_usuario = Integer.parseInt(txtIDUsuario.getText());
-        String nome_usuario = txtNomeUsuario.getText();
+        String nome_usuario = txtNomeUsu.getText();
         String login_usuario = txtLoginUsuario.getText();
         String senha_usuario = txtSenhaUsuario.getText();
         
@@ -277,7 +277,7 @@ public void pesquisa(){
 
     private void btnEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarActionPerformed
          int id_usuario = Integer.parseInt(txtIDUsuario.getText());
-        String nome_usuario = txtNomeUsuario.getText();
+        String nome_usuario = txtNomeUsu.getText();
         String login_usuario = txtLoginUsuario.getText();
         String senha_usuario = txtSenhaUsuario.getText();
            
@@ -340,8 +340,8 @@ public void pesquisa(){
     private javax.swing.JLabel jLabel4;
     private javax.swing.JScrollPane jScrollPane1;
     public static javax.swing.JTextField txtIDUsuario;
-    private javax.swing.JTextField txtLoginUsuario;
-    public javax.swing.JTextField txtNomeUsuario;
-    private javax.swing.JPasswordField txtSenhaUsuario;
+    public static javax.swing.JTextField txtLoginUsuario;
+    public static javax.swing.JTextField txtNomeUsu;
+    public static javax.swing.JPasswordField txtSenhaUsuario;
     // End of variables declaration//GEN-END:variables
 }

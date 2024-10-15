@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+<Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
     <Property name="title" type="java.lang.String" value="Tela Usu&#xe1;rios"/>
@@ -66,7 +66,7 @@
                       <Group type="103" groupAlignment="1" max="-2" attributes="0">
                           <Component id="txtLoginUsuario" alignment="0" pref="463" max="32767" attributes="0"/>
                           <Component id="txtIDUsuario" alignment="0" min="-2" pref="32" max="-2" attributes="0"/>
-                          <Component id="txtNomeUsuario" alignment="0" max="32767" attributes="0"/>
+                          <Component id="txtNomeUsu" alignment="0" max="32767" attributes="0"/>
                           <Component id="txtSenhaUsuario" max="32767" attributes="0"/>
                       </Group>
                   </Group>
@@ -85,7 +85,7 @@
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="txtNomeUsuario" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtNomeUsu" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -136,12 +136,12 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnPesquisarActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JTextField" name="txtNomeUsuario">
+    <Component class="javax.swing.JTextField" name="txtNomeUsu">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtNomeUsuarioActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtNomeUsuActionPerformed"/>
       </Events>
       <AuxValues>
-        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
       </AuxValues>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel2">
@@ -158,6 +158,9 @@
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtLoginUsuarioActionPerformed"/>
       </Events>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
+      </AuxValues>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel4">
       <Properties>
@@ -165,6 +168,9 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JPasswordField" name="txtSenhaUsuario">
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
+      </AuxValues>
     </Component>
     <Component class="javax.swing.JButton" name="btnLimpar">
       <Properties>

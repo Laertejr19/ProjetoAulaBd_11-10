@@ -42,14 +42,14 @@ public class UsuarioDAO {
                     principal.setVisible(true);
                     TelaPrincipal.MenuRel.setEnabled(true);
                     TelaPrincipal.subMenuUsuarios.setEnabled(true);
-                    TelaPrincipal.lblUsuarioPrincipal.setText(rs.getString(2));
-                    TelaPrincipal.lblUsuarioPrincipal.setForeground(Color.RED);
+                    TelaPrincipal.Usuario.setText(rs.getString(2));
+                    TelaPrincipal.Usuario.setForeground(Color.RED);
                     conexao.close();//Fechar a conexão                    
                 } else {
                     TelaPrincipal principal = new TelaPrincipal();
                     principal.setVisible(true);
-                    principal.lblUsuarioPrincipal.setText(rs.getString(2));
-                    TelaPrincipal.lblUsuarioPrincipal.setForeground(Color.BLUE);
+                    principal.Usuario.setText(rs.getString(2));
+                    TelaPrincipal.Usuario.setForeground(Color.BLUE);
                     conexao.close();//Fechar a conexão   
 
                 }
@@ -184,7 +184,7 @@ public class UsuarioDAO {
     public void limparCampos() {
         TelaUsuarios.txtIdUsuario.setText(null);
         TelaUsuarios.txtLoginUsuario.setText(null);
-        TelaUsuarios.txtNomeUsuario.setText(null);
+        TelaUsuarios.txtNomeUsu.setText(null);
         TelaUsuarios.txtSenhaUsuario.setText(null);
         TelaUsuarios.cboPerfilUsuario.setSelectedItem(1);
     }

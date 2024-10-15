@@ -27,9 +27,11 @@ public class TelaPrincipal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        Usuario = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
         MenuRel = new javax.swing.JMenuBar();
-        subMenuUsuarios = new javax.swing.JMenu();
-        SMenuUsuarios = new javax.swing.JRadioButtonMenuItem();
+        ea = new javax.swing.JMenu();
+        subMenuUsuarios = new javax.swing.JRadioButtonMenuItem();
         SMenuCliente = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
         jMenuItem2 = new javax.swing.JMenuItem();
@@ -38,21 +40,25 @@ public class TelaPrincipal extends javax.swing.JFrame {
         setTitle("Tela Usuários");
         setResizable(false);
 
-        subMenuUsuarios.setText("Cadastro");
+        Usuario.setText("Usuario");
 
-        SMenuUsuarios.setSelected(true);
-        SMenuUsuarios.setText("Usuários");
-        SMenuUsuarios.addActionListener(new java.awt.event.ActionListener() {
+        jLabel2.setText("jLabel2");
+
+        ea.setText("Cadastro");
+
+        subMenuUsuarios.setSelected(true);
+        subMenuUsuarios.setText("Usuários");
+        subMenuUsuarios.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                SMenuUsuariosActionPerformed(evt);
+                subMenuUsuariosActionPerformed(evt);
             }
         });
-        subMenuUsuarios.add(SMenuUsuarios);
+        ea.add(subMenuUsuarios);
 
         SMenuCliente.setText("Clientes");
-        subMenuUsuarios.add(SMenuCliente);
+        ea.add(SMenuCliente);
 
-        MenuRel.add(subMenuUsuarios);
+        MenuRel.add(ea);
 
         jMenu2.setText("Opções");
 
@@ -67,21 +73,31 @@ public class TelaPrincipal extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(203, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel2)
+                    .addComponent(Usuario))
+                .addGap(161, 161, 161))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 277, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(36, 36, 36)
+                .addComponent(Usuario)
+                .addGap(32, 32, 32)
+                .addComponent(jLabel2)
+                .addContainerGap(181, Short.MAX_VALUE))
         );
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void SMenuUsuariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SMenuUsuariosActionPerformed
+    private void subMenuUsuariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_subMenuUsuariosActionPerformed
  TelaUsuarios tUsuarios = new TelaUsuarios();  
  tUsuarios.setVisible(true);
-    }//GEN-LAST:event_SMenuUsuariosActionPerformed
+    }//GEN-LAST:event_subMenuUsuariosActionPerformed
 
     /**
      * @param args the command line arguments
@@ -121,9 +137,11 @@ public class TelaPrincipal extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public static javax.swing.JMenuBar MenuRel;
     private javax.swing.JMenuItem SMenuCliente;
-    private javax.swing.JRadioButtonMenuItem SMenuUsuarios;
+    public static javax.swing.JLabel Usuario;
+    public static javax.swing.JMenu ea;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuItem jMenuItem2;
-    private javax.swing.JMenu subMenuUsuarios;
+    public static javax.swing.JRadioButtonMenuItem subMenuUsuarios;
     // End of variables declaration//GEN-END:variables
 }
